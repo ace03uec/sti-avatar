@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Support Save The Internet!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="../js/app.js"></script>
+	</head>
+	<body style="padding-top: 70px;">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">#SaveTheInternet</a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	        </div><!--/.navbar-collapse -->
+	      </div>
+	    </nav>
+		<script >
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '383479635177185',
+					cookie     : true,  // enable cookies to allow the server to access 
+					xfbml      : true,  // parse social plugins on this page
+					version    : 'v2.2' // use version 2.2
+				});
+
+				FB.getLoginStatus(function(response) {
+					DEApp.statusChangeCallback(response);
+				});
+
+			};
+
+			// Load the SDK asynchronously
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+		</script>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-lg-6">
+					<div class="row">
+						<h1>Support Save the Internet!</h1>
+						<p>
+							With the on going campaign by Facebook to spread the message of 
+							FreeBasics, It is time for us to step up, one more time.
+							Change your DP now to support, #SaveTheInternet
+						</p>
+					</div>
+					<div class="row">
+						<p>
+							You can use your current Facebook Profile Picture.
+							Or, Upload an image to #SaveTheInternet.
+							We don't keep copies of your images.
+						</p>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<fb:login-button scope="publish_actions,public_profile,email" onlogin="DEApp.checkLoginState();" 
+							autologoutlink="true">
+							</fb:login-button>
+						</div>
+						<div class="col-md-6">
+							<input type="file" id="file1" onchange="DEApp.uploadManualPic()" value="file1"/>
+						</div>
+					</div>
+					<div class="hidden">
+						<div id="status">
+						</div>
+					</div>
+					<div class="row" id="action_call" style="display:none">
+						<p>
+							The new image can now be saved by clicking below.
+							So, What are you waiting for ? 
+						</p>
+						<p>
+							Make it you profile picture and Support #SaveTheInternet
+						</p>
+						<p>
+							<a class="btn btn-primary" href="" id='d2' download>Go Save the Internet!</a>
+							<a class="btn btn-default" target='_blank' href="//facebook.com/me">Go to Facebook</a>
+						</p>
+						<div class="row">
+							<div class="fb-share-button" href="https://www.facebook.com/sharer/sharer.php?u=http://www.savetheinternet.in/display-pic" data-layout="button"></div>
+
+							<a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://www.savetheinternet.in/display-pic" data-size="large" data-hashtags="savetheinternet">Tweet</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+							<div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="http://www.savetheinternet.in/display-pic"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-lg-6">
+					<div class="canvas_container">
+						<canvas style="display:none" id="canvas" width="500" height="500">
+							
+						</canvas>
+						<img src="" id="mirror" class="canvas_mirror"/>
+					</div>
+					<form id='frm' enctype="multipart/form-data">
+						<img id="mir2" crossOrigin="Anonymous"></img>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+	</body>
+</html>
