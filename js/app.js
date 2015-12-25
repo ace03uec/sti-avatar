@@ -129,6 +129,12 @@ var DEApp = {
                 var d2a = document.getElementById('d2');
                 img.setAttribute('crossOrigin', 'anonymous');
                 img.src = canvas.toDataURL("image/png");
+
+                //Show image of sane size if larger size images are putin.
+                if (profileImg.width > 600){
+                    img.width = 600;
+                }
+                
                 d2a.href = canvas.toDataURL("image/png");
 
                 DEApp.unhide('action_call');
