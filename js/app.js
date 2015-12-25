@@ -2,7 +2,7 @@ var DEApp = {
     loginStatus   : '',
     authResponse  : '',
     profilePicUrl : '',
-    overlayPicUrl : '../img/netneutrality.png',
+    overlayPicUrl : 'img/netneutrality.png',
     albumTitle    : '',
     albumCaption  : '',
     imageTitle    : '', 
